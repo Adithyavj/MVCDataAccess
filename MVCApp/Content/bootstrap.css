@@ -2740,12 +2740,16 @@ textarea.form-control {
 .form-group {
   margin-bottom: 15px;
 }
+
+.form-group .align-center{
+    text-align: left;
+}
 .radio,
 .checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .radio.disabled label,
 .checkbox.disabled label,
@@ -3083,7 +3087,8 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     padding-top: 7px;
     margin-bottom: 0;
-    text-align: right;
+    /*text-align: right;*/
+    text-align : left;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
