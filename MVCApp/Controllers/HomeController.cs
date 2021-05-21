@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataLibrary;
+using static DataLibrary.BusinessLogic.EmployeeProcessor;
 
 namespace MVCApp.Controllers
 {
@@ -45,6 +47,12 @@ namespace MVCApp.Controllers
             if (ModelState.IsValid)
             {
                 // post the data in form and return to the index page
+
+                int recordsCreated = CreateEmployee(model.EmployeeId,
+                    model.FirstName,
+                    model.LastName,
+                    model.EmailAddress);
+
                 return RedirectToAction("Index");
             }
             // else stay at same page
