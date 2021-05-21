@@ -1,2 +1,2 @@
 # MVCDataAccess
-Application for #CRUD using MVC and SQL Server
+Application for CRUD operations using MVC and SQL Server
