@@ -30,6 +30,33 @@ namespace MVCApp.Controllers
             return View();
         }
 
+        // Display data
+        public ActionResult ViewEmployees()
+        {
+            ViewBag.Message = "Employees List";
+
+            // Load all employee details to a var
+            var data = LoadEmployees();
+
+            List<EmployeeModel> employees = new List<EmployeeModel>();
+
+            // loop through the var data and add values to EmployeeMode (front end MVC model)
+            foreach (var row in data)
+            {
+                employees.Add(new EmployeeModel
+                {
+                    EmployeeId = row.EmployeeId,
+                    FirstName = row.FirstName,
+                    LastName = row.LastName,
+                    EmailAddress = row.EmailAddress,
+                    ConfirmEmail = row.EmailAddress
+                });
+            }
+
+            return View(employees);
+        }
+
+
         // Get Req for signup calls signup view
         public  ActionResult SignUp()
         {
