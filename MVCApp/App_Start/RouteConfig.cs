@@ -12,6 +12,8 @@ namespace MVCApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            // Enabling Attribute Routing
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
