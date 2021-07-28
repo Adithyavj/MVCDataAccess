@@ -27,12 +27,14 @@ namespace MVCApp.Controllers
 
 
         [HttpGet]
+        [Route("Studentattr")]
         public ActionResult GetStudents()
         {
             return View(students); // strong typed model
         }
 
         [HttpGet]
+        [Route("Studentattr/{studentID}")]
         public ActionResult GetStudentByID(int studentID)
         {
             StudentAttr studentDetails = students.FirstOrDefault(s => s.Id == studentID);
@@ -40,6 +42,7 @@ namespace MVCApp.Controllers
         }
 
         [HttpGet]
+        [Route("Studentattr/{studentID}/courses")]
         public ActionResult GetStudentCourses(int studentID)
         {
             List<string> CourseList = new List<string>();
